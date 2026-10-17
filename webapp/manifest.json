@@ -1,0 +1,98 @@
+{
+  "_version": "1.89.0",
+  "sap.app": {
+    "id": "com.demo.employee.employeedetailapp",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.33.0",
+      "toolsId": "300e9b9e-82fc-453b-b96d-1221a8e3605d"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.153.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.demo.employee.employeedetailapp.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "com.demo.employee.employeedetailapp.view",
+        "async": true,
+        "viewPath": "com.demo.employee.employeedetailapp.view"
+      },
+      "routes": [
+        {
+          "name": "RouteEmployeepage",
+          "pattern": ":?query:",
+          "target": [
+            "TargetEmployeepage"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetEmployeepage": {
+          "id": "Employeepage",
+          "name": "Employeepage"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "com.demo.employee.employeedetailapp.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}
