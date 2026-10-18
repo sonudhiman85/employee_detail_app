@@ -22,6 +22,10 @@
 				<uxap:expandedContent>
 					<Text text="SAP FICO"/>
 				</uxap:expandedContent>
+				<uxap:expandedContent>
+					<Text text="SAP FICO"/>
+				</uxap:expandedContent>
+
 
 				<uxap:snappedContent>
 					<Text text="SAP FICO "/>
